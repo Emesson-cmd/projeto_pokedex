@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aqua;
+}
+
+.main{
+    margin: 20px auto;
+    max-width: 1100px;
+    background-color: white;
+    padding: 30px 2%;
+    filter: blur(0);
+}
+
+.main h2{
+    text-align: center;
+    color: #ef5350;
+    font-size: 36px;
+}
+
+.pokemon-boxes{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.pokemon-box{
+    width: 31%;
+    background-color: rgb(230, 230, 230);
+    border-radius: 15px;
+    margin: 10px 1%;
+}
+
+.pokemon-box img{
+    width: 100%;
+}
+
+.pokemon-box p{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.escolher-quantidade{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px 0;
+    background-color: rgb(230, 230, 230);
+    border-radius: 15px;
+}
+
+.escolher-quantidade > input{
+    margin: 10px 0;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.espera{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    border-radius: 50%;
+    transform:translate(-50%, -50%);
+}
+
+.espera > .rodando{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.espera:hover{
+    animation-name: animation_1; /* nome da animação para utilziar com keyframes */
+    animation-duration: 4s; /* quanto tempo a animação vai durar */
+    animation-iteration-count: infinite; /* quantas vezes a animação vai repetir */
+    
+}
+
+/* https://youtu.be/JLlBTY8n9Fk */
+
+@keyframes animation_1 {
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: green;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pokemon-box{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .pokemon-box{
+        width: 100%;
+    }
+}
