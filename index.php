@@ -10,7 +10,7 @@
 <body>
 
     <div class="main">
-        <h2>Pokedex</h2>
+        <h2>Pokedéx</h2>
 
         <div class="escolher-quantidade">
             <label for="quantidade">Escolher quantidade de pokemons para vizualizar:</label><br>
